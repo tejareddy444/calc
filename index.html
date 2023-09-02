@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)file:///C:/html/calc0.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>CALCULATOR</title>
+	<style type="text/css">
+		button{
+			    width: 70px;
+    height: 50px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+		}
+		button:hover {
+
+    background-color: yellow;
+
+}
+table{
+	    padding: 10px;
+	     border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+table,tr,td{
+	background-color: red;
+}
+
+	</style>
+</head>
+<body><center>
+	<input type="text" id="screen" placeholder="0" style="
+    width: 310px;
+    height: 42px;
+    background: greenyellow;
+    border: 2px solid blue;
+    color: pink;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+">
+	<table>
+		<tbody><tr>
+			<td><button onclick="display(&#39;7&#39;)">7 </button></td>
+			<td><button onclick="display(&#39;8&#39;)"> 8</button></td>
+			<td><button onclick="display(&#39;9&#39;)">9 </button></td>
+			<td><button onclick="display(&#39;+&#39;)"> +</button></td>
+		</tr><tr>
+			</tr><tr>
+			<td><button onclick="display(&#39;4&#39;)">4 </button></td>
+			<td><button onclick="display(&#39;5&#39;)">5 </button></td>
+			<td><button onclick="display(&#39;6&#39;)">6 </button></td>
+			<td><button onclick="display(&#39;-&#39;)">- </button></td>
+		</tr><tr></tr><tr>
+			<td><button onclick="display(&#39;1&#39;)">1</button></td>
+			<td><button onclick="display(&#39;2&#39;)">2 </button></td>
+			<td><button onclick="display(&#39;3&#39;)">3 </button></td>
+			<td><button onclick="display(&#39;&#39;)"> </button></td>
+		</tr><tr></tr><tr>
+			<td><button onclick="display(&#39;0&#39;)">0 </button></td>
+			<td><button onclick="clr(&#39;c&#39;)">c </button></td>
+			<td><button onclick="solve(&#39;=&#39;)"> =</button></td>
+			<td><button onclick="display(&#39;/&#39;)">/ </button></td>
+		</tr><tr>
+	</tr></tbody></table>
+	<script>
+
+		let screenval=document.getElementById("screen")
+		function display(va){
+			screenval.value+=va
+		}
+		function solve(){
+			try{
+				screenval.value=eval(screenval.value)
+				console.log('hello',screenval)
+			}
+			catch(err){
+				alert(err)
+			}
+		}
+		function clr(){
+			screenval.value=""
+		}
+
+	
+	</script>
+</center>
+
+</body></html>
